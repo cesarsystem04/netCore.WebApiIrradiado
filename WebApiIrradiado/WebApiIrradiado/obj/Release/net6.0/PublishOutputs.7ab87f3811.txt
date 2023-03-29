@@ -1,0 +1,11 @@
+C:\github\netCore.WebApiIrradiado\WebApiIrradiado\WebApiIrradiado\obj\Release\net6.0\PubTmp\Out\WebApiIrradiado.exe
+C:\github\netCore.WebApiIrradiado\WebApiIrradiado\WebApiIrradiado\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\github\netCore.WebApiIrradiado\WebApiIrradiado\WebApiIrradiado\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\github\netCore.WebApiIrradiado\WebApiIrradiado\WebApiIrradiado\obj\Release\net6.0\PubTmp\Out\WebApiIrradiado.dll
+C:\github\netCore.WebApiIrradiado\WebApiIrradiado\WebApiIrradiado\obj\Release\net6.0\PubTmp\Out\WebApiIrradiado.deps.json
+C:\github\netCore.WebApiIrradiado\WebApiIrradiado\WebApiIrradiado\obj\Release\net6.0\PubTmp\Out\WebApiIrradiado.runtimeconfig.json
+C:\github\netCore.WebApiIrradiado\WebApiIrradiado\WebApiIrradiado\obj\Release\net6.0\PubTmp\Out\WebApiIrradiado.pdb
+C:\github\netCore.WebApiIrradiado\WebApiIrradiado\WebApiIrradiado\obj\Release\net6.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\github\netCore.WebApiIrradiado\WebApiIrradiado\WebApiIrradiado\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\github\netCore.WebApiIrradiado\WebApiIrradiado\WebApiIrradiado\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\github\netCore.WebApiIrradiado\WebApiIrradiado\WebApiIrradiado\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
