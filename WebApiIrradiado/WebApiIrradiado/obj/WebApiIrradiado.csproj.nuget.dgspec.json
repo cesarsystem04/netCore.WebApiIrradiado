@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\github\\netCore.WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado.csproj": {}
+    "C:\\github\\netCore.WebApiIrradiado\\netCore.WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado.csproj": {}
   },
   "projects": {
-    "C:\\github\\netCore.WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado.csproj": {
+    "C:\\github\\netCore.WebApiIrradiado\\netCore.WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\github\\netCore.WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado.csproj",
+        "projectUniqueName": "C:\\github\\netCore.WebApiIrradiado\\netCore.WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado.csproj",
         "projectName": "WebApiIrradiado",
-        "projectPath": "C:\\github\\netCore.WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado.csproj",
+        "projectPath": "C:\\github\\netCore.WebApiIrradiado\\netCore.WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado.csproj",
         "packagesPath": "C:\\Users\\c.torres\\.nuget\\packages\\",
-        "outputPath": "C:\\github\\netCore.WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado\\obj\\",
+        "outputPath": "C:\\github\\netCore.WebApiIrradiado\\netCore.WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",

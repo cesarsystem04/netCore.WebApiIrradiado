@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EGqWeUWk+tk+YBObyQMeqAGNRX830AgRfEgZIeYtjwovkvGf0AQDuzKQASEaAIpTyGeE3vsNA/I3v/tdS+2f5A==",
+  "dgSpecHash": "1k+scWZ+wwrD+NXlP6Flpd6P9B4UMH9+gMmKVwGY+bOzwie0ZM/NW1PGsfF9LbIg4tII+U6AxAnCjuyHi9fA0Q==",
   "success": true,
-  "projectFilePath": "C:\\github\\netCore.WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado.csproj",
+  "projectFilePath": "C:\\github\\netCore.WebApiIrradiado\\netCore.WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado\\WebApiIrradiado.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\c.torres\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\c.torres\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

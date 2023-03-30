@@ -48,5 +48,19 @@ namespace WebApiIrradiado.Controllers
         }
 
 
+        [HttpPost]
+        [Route("PutReceta2")]
+        public void PutReceta2(RecetasRequest request)
+        {
+            try
+            {
+                
+            }
+            catch (Exception e)
+            {
+              
+            }
+        }
+
     }
 }
