@@ -28,6 +28,16 @@
 
     }
 
+    public class RecetasResponse2
+    {        
+        public string? messages { get; set; }
+        public string? success { get; set; }
+
+
+
+    }
+
+
 
     public class RecetasRequest
     {
@@ -42,6 +52,15 @@
 
     }
 
-    
+
+
+
+
+    public class RecetasRequest2
+    {
+        public Recetas? recetas { get; set; }
+
+    }
+
 
 }
