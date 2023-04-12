@@ -16,10 +16,12 @@ namespace WebApiIrradiado.Controllers
         {
             try
             {
-                RecetasResponse recetas = new RecetasResponse();
-                recetas.recetas = receta;
-                recetas.codError = 0;
-                recetas.msgRespuesta = "Ejecución exitosa";
+                RecetasResponse recetas = new()
+                {
+                    recetas = receta,
+                    codError = 0,
+                    msgRespuesta = "Ejecución exitosa"
+                };
 
                 return Ok(recetas);
             }
@@ -35,40 +37,39 @@ namespace WebApiIrradiado.Controllers
         {
             try
             {
-
                 cDatos objDatos = new cDatos();
-
                 string strSQLuno = string.Format(@"INSERT INTO [Configuration].[Recetas](date_modify)
                                                 VALUES('{0}')",
                                            DateTime.Now.ToString()
                                            );
+
                 var dstDatosuno = objDatos.EjecutaConsultaSqlServer(strSQLuno);
 
-                //string strSQL = string.Format("Select top 1 * from [Work].[Factura]");
-                string strSQL = string.Format(@"INSERT INTO [Configuration].[Recetas]([recipe_num],[empaque],[parametro],[nom_value],[uom],[min_value],[max_value],[manual],[detenido],[tipo],[trans_erp])
+                if (request.data != null)
+                {
+                    string strSQL = string.Format(@"INSERT INTO [Configuration].[Recetas]([recipe_num],[empaque],[parametro],[nom_value],[uom],[min_value],[max_value],[manual],[detenido],[tipo],[trans_erp])
                                                 VALUES('{0}','{1}','{2}',{3},'{4}','{5}','{6}','{7}','{8}','{9}','{10}')",
-                                                request.data.recetas[0].recipe_num.ToString(),
-                                                request.data.recetas[0].empaque.ToString(),
-                                                request.data.recetas[0].parametro.ToString(),
-                                                request.data.recetas[0].nom_value.ToString(),
-                                                request.data.recetas[0].uom.ToString(),
-                                                request.data.recetas[0].min_value.ToString(),
-                                                request.data.recetas[0].max_value.ToString(),
-                                                request.data.recetas[0].manual.ToString(),
-                                                request.data.recetas[0].detenido.ToString(),
-                                                request.data.recetas[0].tipo.ToString(),
-                                                request.data.recetas[0].trans_erp.ToString()
-                                                );
+                                                    request.data.recetas[0].recipe_num.ToString(),
+                                                    request.data.recetas[0].empaque.ToString(),
+                                                    request.data.recetas[0].parametro.ToString(),
+                                                    request.data.recetas[0].nom_value.ToString(),
+                                                    request.data.recetas[0].uom.ToString(),
+                                                    request.data.recetas[0].min_value.ToString(),
+                                                    request.data.recetas[0].max_value.ToString(),
+                                                    request.data.recetas[0].manual.ToString(),
+                                                    request.data.recetas[0].detenido.ToString(),
+                                                    request.data.recetas[0].tipo.ToString(),
+                                                    request.data.recetas[0].trans_erp.ToString()
+                                                    );
 
+                    var dstDatos = objDatos.EjecutaConsultaSqlServer(strSQL);
+                }
 
-
-                var dstDatos = objDatos.EjecutaConsultaSqlServer(strSQL);
-
-
-                RecetasResponse2 recetas = new RecetasResponse2();
-
-                recetas.messages = "Hola Mundo, por fin tenemos  nuestra interfaz de salida REST";
-                recetas.success = "Ok";
+                RecetasResponse2 recetas = new()
+                {
+                    messages = "Hola Mundo, por fin tenemos  nuestra interfaz de salida REST",
+                    success = "Ok"
+                };
 
                 return Ok(recetas);
             }
@@ -85,26 +86,6 @@ namespace WebApiIrradiado.Controllers
         {
             try
             {
-
-                //using (StreamWriter writer = new StreamWriter(Path.Combine("C:\\Temp\\pruebasIrradiado", "reg.txt"), append: true))
-                //{
-                //    string mensaje = "Inicio: " + DateTime.Now.ToString() + " ";
-                //    mensaje += "recipe_num = " + request.data.recetas[0].recipe_num + ", ";
-                //    mensaje += "empaque = " + request.data.recetas[0].empaque + ", ";
-                //    mensaje += "parametro = " + request.data.recetas[0].parametro + ", ";
-                //    mensaje += "nom_value = " + request.data.recetas[0].nom_value + ", ";
-                //    mensaje += "min_value = " + request.data.recetas[0].min_value + ", ";
-                //    mensaje += "max_value = " + request.data.recetas[0].max_value + ", ";
-                //    mensaje += "manual = " + request.data.recetas[0].manual + ", ";
-                //    mensaje += "detenido = " + request.data.recetas[0].detenido + ", ";
-                //    mensaje += "tipo = " + request.data.recetas[0].tipo + ", ";
-                //    mensaje += "trans_erp = " + request.data.recetas[0].trans_erp + ", ";
-                //    mensaje += "date_modify = " + request.data.recetas[0].date_modify + ", ";
-                //    writer.WriteLine(String.Format("{0}", mensaje));
-                //    writer.Flush();
-                //    writer.Close();
-                //}
-
                 cDatos objDatos = new cDatos();
 
                 string strSQLuno = string.Format(@"INSERT INTO [Configuration].[Recetas](date_modify)
@@ -113,7 +94,6 @@ namespace WebApiIrradiado.Controllers
                                            );
                 var dstDatosuno = objDatos.EjecutaConsultaSqlServer(strSQLuno);
 
-                //string strSQL = string.Format("Select top 1 * from [Work].[Factura]");
                 string strSQL = string.Format(@"INSERT INTO [Configuration].[Recetas]([recipe_num],[empaque],[parametro],[nom_value],[uom],[min_value],[max_value],[manual],[detenido],[tipo],[trans_erp])
                                                 VALUES('{0}','{1}','{2}',{3},'{4}','{5}','{6}','{7}','{8}','{9}','{10}')",
                                                 request.data.recetas[0].recipe_num.ToString(),
@@ -129,13 +109,9 @@ namespace WebApiIrradiado.Controllers
                                                 request.data.recetas[0].trans_erp.ToString()
                                                 );
 
-
-
                 var dstDatos = objDatos.EjecutaConsultaSqlServer(strSQL);
-
-
             }
-            catch (Exception e)
+            catch (Exception)
             {
 
             }
@@ -199,10 +175,10 @@ namespace WebApiIrradiado.Controllers
 
                     if (propiedad.Name == "tipo")
                         mensajes += "tipo = " + propiedad.GetValue(request) + ", ";
-                    
+
                     if (propiedad.Name == "trans_erp")
                         mensajes += "trans_erp = " + propiedad.GetValue(request) + ", ";
-                    
+
                     if (propiedad.Name == "date_modify")
                         mensajes += "date_modify = " + propiedad.GetValue(request) + ", ";
                 }
@@ -216,7 +192,6 @@ namespace WebApiIrradiado.Controllers
                                            );
                 var dstDatosuno = objDatos.EjecutaConsultaSqlServer(strSQLuno);
 
-                //string strSQL = string.Format("Select top 1 * from [Work].[Factura]");
                 string strSQL = string.Format(@"INSERT INTO [Configuration].[Recetas]([recipe_num],[empaque],[parametro],[nom_value],[uom],[min_value],[max_value],[manual],[detenido],[tipo],[trans_erp])
                                                 VALUES('{0}','{1}','{2}',{3},'{4}','{5}','{6}','{7}','{8}','{9}','{10}')",
                                                 request.data.recetas[0].recipe_num.ToString(),
@@ -232,13 +207,10 @@ namespace WebApiIrradiado.Controllers
                                                 request.data.recetas[0].trans_erp.ToString()
                                                 );
 
-
-
                 var dstDatos = objDatos.EjecutaConsultaSqlServer(strSQL);
 
-
             }
-            catch (Exception e)
+            catch (Exception)
             {
 
             }

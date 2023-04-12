@@ -2,21 +2,20 @@
 {
     public class Recetas
     {
-        public string? recipe_num { get; set; }
-        public string? empaque { get; set; }
-        public string? parametro { get; set; }
+        public string recipe_num { get; set; } = string.Empty;
+        public string empaque { get; set; } = string.Empty;
+        public string parametro { get; set; } = string.Empty;
         public decimal nom_value { get; set; }
-        public string? uom { get; set; }
+        public string uom { get; set; } = string.Empty;
         public decimal min_value { get; set; }
         public decimal max_value { get; set; }
         public byte manual { get; set; }
         public byte detenido { get; set; }
-        public string? tipo { get; set; }
+        public string tipo { get; set; } = string.Empty;
         public byte trans_erp { get; set; }
         public string? date_modify { get; set; }
-
-
     }
+
 
     public class RecetasResponse
     {
@@ -29,7 +28,7 @@
     }
 
     public class RecetasResponse2
-    {        
+    {
         public string? messages { get; set; }
         public string? success { get; set; }
 
@@ -46,7 +45,7 @@
     }
 
 
-    public class Data 
+    public class Data
     {
         public Recetas[]? recetas { get; set; }
 

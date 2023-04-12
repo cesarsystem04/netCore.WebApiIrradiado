@@ -14,7 +14,7 @@ namespace WebApiIrradiado
         public bool BolExito { get; set; }
 
 
-        public DataSet EjecutaConsultaSqlServer(string strQuery) 
+        public DataSet EjecutaConsultaSqlServer(string strQuery)
         {
             MsgError = string.Empty;
             BolExito = true;
