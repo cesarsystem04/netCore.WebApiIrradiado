@@ -14,6 +14,11 @@
         public string tipo { get; set; } = string.Empty;
         public byte trans_erp { get; set; }
         public string? date_modify { get; set; }
+
+        public Recetas() 
+        {
+            var x = 1;
+        }
     }
 
 
@@ -48,6 +53,12 @@
     public class Data
     {
         public Recetas[]? recetas { get; set; }
+        //public Recetas? receta { get; set; }
+
+        public Data() 
+        {
+          
+        }
 
     }
 
@@ -57,9 +68,34 @@
 
     public class RecetasRequest2
     {
+        public Data2? data { get; set; }
+
+    }
+
+    public class Data2
+    {
         public Recetas? recetas { get; set; }
 
     }
+
+
+
+    public interface IReceta 
+    {
+    
+    }
+
+    public abstract class AReceta 
+    {
+    
+    }
+
+    public class RecetaOne : AReceta 
+    {
+    
+    
+    }
+
 
 
 }

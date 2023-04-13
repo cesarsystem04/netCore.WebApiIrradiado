@@ -31,9 +31,10 @@ namespace WebApiIrradiado.Controllers
             }
         }
 
+
         [HttpPost]
         [Route("PutReceta")]
-        public ActionResult PutReceta(RecetasRequest request)
+        public ActionResult PutReceta([Bind("Id,Name,Number,Address")]RecetasRequest request)
         {
             try
             {
@@ -78,6 +79,57 @@ namespace WebApiIrradiado.Controllers
                 return BadRequest(e);
             }
         }
+
+
+        //[HttpPost]
+        //[Route("PutReceta")]
+        //public ActionResult PutReceta(RecetasRequest2 request)
+        //{
+        //    try
+        //    {
+        //        cDatos objDatos = new cDatos();
+        //        string strSQLuno = string.Format(@"INSERT INTO [Configuration].[Recetas](date_modify)
+        //                                        VALUES('{0}')",
+        //                                   DateTime.Now.ToString()
+        //                                   );
+
+        //        var dstDatosuno = objDatos.EjecutaConsultaSqlServer(strSQLuno);
+
+        //        if (request.recetas != null)
+        //        {
+        //            string strSQL = string.Format(@"INSERT INTO [Configuration].[Recetas]([recipe_num],[empaque],[parametro],[nom_value],[uom],[min_value],[max_value],[manual],[detenido],[tipo],[trans_erp])
+        //                                        VALUES('{0}','{1}','{2}',{3},'{4}','{5}','{6}','{7}','{8}','{9}','{10}')",
+        //                                            request.recetas.recipe_num.ToString(),
+        //                                            request.recetas.empaque.ToString(),
+        //                                            request.recetas.parametro.ToString(),
+        //                                            request.recetas.nom_value.ToString(),
+        //                                            request.recetas.uom.ToString(),
+        //                                            request.recetas.min_value.ToString(),
+        //                                            request.recetas.max_value.ToString(),
+        //                                            request.recetas.manual.ToString(),
+        //                                            request.recetas.detenido.ToString(),
+        //                                            request.recetas.tipo.ToString(),
+        //                                            request.recetas.trans_erp.ToString()
+        //                                            );
+
+        //            var dstDatos = objDatos.EjecutaConsultaSqlServer(strSQL);
+        //        }
+
+        //        RecetasResponse2 recetas = new()
+        //        {
+        //            messages = "Hola Mundo, por fin tenemos  nuestra interfaz de salida REST",
+        //            success = "Ok"
+        //        };
+
+        //        return Ok(recetas);
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        return BadRequest(e);
+        //    }
+        //}
+
+
 
 
         [HttpPost]
