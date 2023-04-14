@@ -1,4 +1,6 @@
-﻿namespace WebApiIrradiado
+﻿using System.Security.Policy;
+
+namespace WebApiIrradiado
 {
     public class Recetas
     {
@@ -15,7 +17,7 @@
         public byte trans_erp { get; set; }
         public string? date_modify { get; set; }
 
-        public Recetas() 
+        public Recetas()
         {
             var x = 1;
         }
@@ -55,47 +57,11 @@
         public Recetas[]? recetas { get; set; }
         //public Recetas? receta { get; set; }
 
-        public Data() 
+        public Data()
         {
-          
+
         }
 
     }
-
-
-
-
-
-    public class RecetasRequest2
-    {
-        public Data2? data { get; set; }
-
-    }
-
-    public class Data2
-    {
-        public Recetas? recetas { get; set; }
-
-    }
-
-
-
-    public interface IReceta 
-    {
-    
-    }
-
-    public abstract class AReceta 
-    {
-    
-    }
-
-    public class RecetaOne : AReceta 
-    {
-    
-    
-    }
-
-
 
 }
